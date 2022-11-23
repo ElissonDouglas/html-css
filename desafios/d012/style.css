@@ -34,20 +34,15 @@ header a {
     font-weight: normal;
     color: white;
     text-decoration: none;
-    font-size: 1em;
 }
 
 header > p {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: normal;
-    margin: auto;
     text-align: center;
     color: white;
 }
 
-header  a:hover {
-    text-decoration: underline;
-}
 
 header > h1 {
     font-family: 'Passion One', cursive;
@@ -58,7 +53,7 @@ header > h1 {
     padding-top: 50px;
 }
 
-header > h1:hover {
+header > h1:hover, footer a:hover, header  a:hover {
     text-decoration: underline;
 }
 
@@ -90,18 +85,17 @@ section.imagem > p {
 }
 
 section.imagem#img1 {
-    box-shadow: inset 4px 34px 13px 0px rgba(11, 11, 11, 0.47);
-    background-image: url('imagens/background001.jpg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
+    background-image: url('imagens/background001.jpg'); 
 }
 
-
 section.imagem#img2 {
-    box-shadow: inset 4px 10px 13px 0px rgba(11, 11, 11, 0.247);
     background-image: url('imagens/background002.jpg');
+}
+
+section.imagem#img1, section.imagem#img2{
+    box-shadow: inset 4px 10px 13px 0px rgba(11, 11, 11, 0.47);
     background-repeat: no-repeat;
+    background-position: right center;
     background-attachment: fixed;
     background-size: cover;
 }
@@ -118,9 +112,6 @@ footer a {
     color: white;
 }
 
-footer a:hover {
-    text-decoration: underline;
-}
 
 
 
