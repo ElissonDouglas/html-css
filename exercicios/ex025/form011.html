@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste</title>
+    <style>
+        legend {
+            text-align: center;
+        }
+
+        .main-form {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: auto;
+            border-radius: 8px;
+        }
+        .main-form > label {
+            margin-bottom: 3px;
+            margin-top: 10px;
+        }
+
+        .main-form > input {
+            width: 50%;
+            text-align: center;
+        }
+
+        form > p {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        form > p > input {
+            width: 100px;
+            margin-bottom: 10px;
+        }
+
+       
+
+        
+    </style>
+</head>
+<body>
+    <h1>Formulário de Cadastro</h1>
+    <form action="cadastro.php">
+        <fieldset class="main-form">
+            <legend>Cadastre-se</legend>
+            <label for="inome">Nome</label>
+            <input type="text" name="inome" id="inome" placeholder="Digite seu nome completo" maxlength="50" required>
+
+            <label for="iestado">Estado</label>
+            <select name="estados" id="iestado" required>
+                <option value="">---Selecione---</option>
+                <optgroup label="Região Nordeste">
+                    <option value="PB">Paraíba</option>
+                    <option value="CE">Ceará</option>
+                </optgroup>
+
+                <optgroup label="Região Sudeste">
+                    <option value="SP">São Paulo</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                </optgroup>
+            </select>
+
+            <label for="idade">Idade</label>
+            <input type="number" name="idade" id="idade" value="18" min="18" max="32" required>
+
+            <label for="iemail">Email</label>
+            <input type="email" name="email" id="iemail" placeholder="usuario@exemplo.com" required>
+
+            <label for="itel">Telefone</label>
+            <input type="tel" name="tel" id="itel" placeholder="(xx) xxxxx-xxxx" pattern="^\(\d{2}\) \d{4,5}-\d{4}$">
+
+            <label for="area">Área de atuação</label>
+
+            <div>
+                <input type="radio" name="area" id="idesign">
+                <label for="idesign">Design</label>
+                
+                <input type="radio" name="area" id="iprogamacao">
+                <label for="iprogamacao">Progamação</label>
+            </div>
+
+        </fieldset>
+
+
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Reset">
+        </p>
+    </form>
+</body>
+</html>
