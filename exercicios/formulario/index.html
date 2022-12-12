@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <header>
+        <h1>Formulário de Pesquisa</h1>
+        <p>Obrigado por tirar um tempo para responder esse formulário.</p>
+    </header>
+    
+    <div class="form">
+        <form action="teste.php">
+            <div class="campos">
+                <label for="nome">Nome</label>
+                <input type="text" name="nome" id="nome" required placeholder="Seu nome">
+            </div>
+
+            <div class="campos">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required placeholder="Seu email">
+            </div>
+
+            <div class="campos">
+                <label for="idade">Idade (opcional)</label>
+                <input type="number" name="idade" id="idade" min="16" placeholder="Idade">
+            </div>
+
+            <div class="campos">
+                <label for="cargo">Qual é o seu cargo no momento?</label>
+                <select name="cargo" id="cargo" required>
+                    <option value="">Selecione uma opção</option>
+                    <option value="estudante">Estudante</option>
+                    <option value="professor">Professor</option>
+                    <option value="nao-informar">Prefiro não informar</option>
+                    <option value="outro">Outro</option>
+                </select>
+            </div>
+
+            <div class="campos">
+                <label for="recomendar">Você recomendaria esse site para um amigo?</label>
+                
+                <label for="com-certeza"><input type="radio" name="recomendar" id="com-certeza">Com certeza</label>
+                
+                <label for="talvez"><input type="radio" name="recomendar" id="talvez">Talvez</label>
+                
+                <label for="sem-certeza"><input type="radio" name="recomendar" id="sem-certeza">Não tenho certeza</label>
+            </div>
+
+            <div class="campos">
+                <label for="recurso">Qual é o seu recurso favorito do site?</label>
+                <select name="recurso" id="recurso" required>
+                    <option value="">Selecione uma opção</option>
+                    <option value="desafios">Desafios</option>
+                    <option value="projetos">Projetos</option>
+                    <option value="comunidade">Comunidade</option>
+                    <option value="nao-sei">Não sei</option>
+                </select>
+            </div>
+
+            <div class="campos">
+                <label for="melhorias">O que você acha que poderia melhorar? (marque todos que se aplicam)</label>
+                
+                <label for="desafios"><input type="checkbox" name="melhorias" id="desafios">Desafios</label>
+                
+                <label for="aulas"><input type="checkbox" name="melhorias" id="aulas">Aulas</label>
+                
+                <label for="forum"><input type="checkbox" name="melhorias" id="forum">Forum</label>
+            </div>
+
+            <div class="campos">
+                <label for="comentario">Algum comentário adicional? (opcional)</label>
+                <textarea name="comentario" id="comentario" cols="30" rows="10" placeholder="Seu comentário aqui" maxlength="100"></textarea>
+            </div>
+
+            <input type="submit" value="Enviar">
+        </form>
+    </div>
+</body>
+</html>
